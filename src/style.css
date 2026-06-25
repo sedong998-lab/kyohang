@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+  background: #f9fafb;
+  overflow-y: auto;
+  max-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.site-title {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+.search {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  background: #ffffff;
+}
+
+.category {
+  margin-bottom: 18px;
+}
+
+.category h2 {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 16px 0 8px;
+}
+
+.category button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #111827;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.category button:hover,
+.category button.active {
+  background: #e5e7eb;
+}
+
+.content {
+  padding: 48px 64px;
+}
+
+article {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.category-label,
+.date {
+  color: #6b7280;
+  margin: 0 0 8px;
+}
+
+article > h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+.markdown {
+  line-height: 1.75;
+  font-size: 17px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  margin-top: 32px;
+  line-height: 1.3;
+}
+
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 18px 0;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  vertical-align: top;
+}
+
+.markdown th {
+  background: #f3f4f6;
+}
+
+.markdown code {
+  background: #f3f4f6;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.markdown pre {
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown a {
+  color: #2563eb;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .content {
+    padding: 28px 20px;
+  }
+}
